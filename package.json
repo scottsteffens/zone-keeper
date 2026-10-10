@@ -1,0 +1,35 @@
+{
+  "name": "zone-keeper",
+  "version": "0.0.0",
+  "description": "DNS zones as files in your repo: export, plan, apply, and a token-free drift check. Hetzner Cloud DNS first.",
+  "license": "MIT",
+  "author": "Scott Steffens",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottsteffens/zone-keeper.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2",
+    "vite": "8.3.4",
+    "vitest": "5.0.3"
+  }
+}
