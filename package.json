@@ -9,8 +9,11 @@
     "url": "git+https://github.com/scottsteffens/zone-keeper.git"
   },
   "type": "module",
+  "bin": {
+    "zone-keeper": "dist/cli.js"
+  },
   "engines": {
-    "node": ">=22"
+    "node": "^22.18.0 || >=23.6.0"
   },
   "exports": {
     ".": {
@@ -24,7 +27,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "npm run build && vitest run"
   },
   "devDependencies": {
     "@types/node": "24.19.2",
